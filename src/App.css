@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  /*animation: App-logo-spin infinite 20s linear;*/
+  height: 40px;
+}
+
+.App-header {
+  background-color: rgb(240,240,240);
+  height: 40px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.menu-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: rgb(240,240,240);
+}
+
+/*.main-menu {
+  list-style: none;
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}*/
+
+/*.active {
+  background-color: rgb(50, 50, 90);
+  border-top-right-radius: 5px;
+  position: absolute;
+
+}*/
+
+/*.active:hover {
+  background-color: rgb(50, 50, 90)!important;
+}*/
+
+/*.main-menu li {
+  line-height: 50px;
+  display: inline-block;
+  width: 25%;
+  position: relative;
+}*/
+
+/*.main-menu li a {
+  /*padding: 15px 25px 0;*/
+  /*display: inline-block;
+  width: 100%;
+  position: relative;
+  color: rgb(25, 25, 25);
+  text-decoration: none;
+}*/
+
+/*.menu-item i {
+  color: rgb(25,25,25);
+  z-index: 5;
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 5px;
+  font-size: 28px;
+}*/
+
+/*.main-menu li a:hover {
+  background-color: rgb(200,200,200);
+  text-decoration: none;
+}*/
