@@ -37,6 +37,13 @@ class DBService {
         });
     }
 
+    getImagesFromCollection(collection, callback) {
+        const ref = this.database.ref("/images");
+        ref.orderByChild("/collection").equalTo(collection).on("child_added", snap => {
+            callback(snap.val());
+        });
+    }
+
     deleteFromDB(data) {
         return new Promise((resolve, reject) => {
             const dbRef = this.database.ref(data);
