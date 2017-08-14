@@ -1,0 +1,15 @@
+.list-image-container {
+  display: inline;
+}
+
+.image-overlay {
+  /*position: absolute;*/
+}
+
+.list-image-container img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
