@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import injectTapEventPlugin from "react-tap-event-plugin";
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
+import darkBaseTheme from "material-ui/styles/baseThemes/darkBaseTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 
@@ -27,7 +28,7 @@ store.dispatch((dispatch) => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+    <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
       <App />
     </MuiThemeProvider>
   </Provider>,
