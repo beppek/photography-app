@@ -9,7 +9,7 @@
 .list-image-container img {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 5px;
   position: relative;
-  top: 0;
+  cursor: zoom-in;
 }
