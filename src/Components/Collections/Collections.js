@@ -1,55 +1,40 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
+import {connect} from "react-redux";
 
-// FIND A BETTER MASONRY GRID
-// import MasonryLayout from "react-masonry-layout";
-// import MasonryInfiniteScroller from "react-masonry-infinite";
-// import * as Masonry from "react-masonry-component";
 import MasonryGrid from "../MasonryGrid/MasonryGrid";
 
 import Image from "./Image";
+import FullscreenImage from './FullscreenImage';
 
 import "./Collections.css";
 
-// import DBService from "../../Firebase/DBService";
-
 class Collections extends Component {
-  constructor(props) {
-    super(props);
-
-    // this.state = {
-
-    //   images: []
-
-    // };
-
-    // this.dbService = new DBService();
-  }
 
   handleScroll() {}
 
   render() {
     let imgs = [];
-    this.props.images.forEach((img, i) => {
-      // console.log(img);
-      imgs.push(
-        <Image
-        //   style={{
-        //     width: "236px",
-        //     display: "block",
-        //     height: `${i % 2 === 0 ? 4 * 50 : 50}px`
-
-        //   }}
-          key={img.key}
-          img={img}
-        />
-      );
+    let {images, fullscreenImage} = this.props;
+    images.forEach((img, i) => {
+      imgs.push(<Image key={img.key} img={img}/>);
     });
     return (
       <div className="Collections">
-        <MasonryGrid imgs={imgs} />
+        {!fullscreenImage
+          ? <MasonryGrid imgs={imgs}/>
+          : <FullscreenImage img={fullscreenImage}/>
+}
       </div>
     );
   }
 }
 
-export default Collections;
+const mapStateToProps = (state) => {
+  return {
+    images: state.images.images, 
+    collections: state.collections.collections,
+    fullscreenImage: state.images.fullscreenImage
+  }
+}
+
+export default connect(mapStateToProps)(Collections);

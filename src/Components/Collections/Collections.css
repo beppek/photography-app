@@ -1,5 +1,7 @@
 .Collections {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 50px);
+  background: rgba(25,25,25,0.9);
+  background-attachment: fixed;
 }
 /*
 .collection-grid {
