@@ -9,3 +9,20 @@ export function fetchImages(dispatch) {
     })
   });
 }
+
+export function viewInFullscreen(image, dispatch) {
+  return (dispatch) => {
+    dispatch({
+      type: "VIEW_IN_FULLSCREEN",
+      image
+    });
+  }
+}
+
+export function closeFullscreen(dispatch) {
+  return (dispatch) => {
+    dispatch({
+      type: "CLOSE_FULLSCREEN_VIEW",
+    });
+  }
+}
