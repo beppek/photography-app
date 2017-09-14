@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./MasonryGrid.css";
 
+const width = window.innerWidth > 400 ? 420: 300;
+
 class MasonryGrid extends Component {
   constructor(props) {
     super(props);
@@ -23,15 +25,7 @@ class MasonryGrid extends Component {
 
   calculateRows = () => {
     let rows;
-    // if (this.state.width > 1000) {
-    //   rows = 4;
-    // } else if (this.state.width > 800) {
-    //   rows = 3;
-    // } else {
-    //   rows = 2;
-    // }
-    rows = Math.floor(this.state.width / 260);
-    console.log(rows);
+    rows = Math.floor(this.state.width / width);
     return rows;
   };
 
@@ -42,10 +36,10 @@ class MasonryGrid extends Component {
     for (index = 0; index < numOfRows; index += 1) {
       rows.push({ key: index, imgs: [] });
     }
-    let imgs = this.props.imgs;
+    let {imgs} = this.props;
     let rowLength = imgs.length / numOfRows;
     let currentRow = 0;
-    if (imgs.length > 0) {
+    if (rows.length > 0) {
       imgs.map((img, i) => {
         rows[currentRow].imgs.push(img);
         if (i + 1 - currentRow * rowLength >= rowLength) {
@@ -61,7 +55,7 @@ class MasonryGrid extends Component {
     let grid = [];
     rows.forEach(row => {
       grid.push(
-        <div key={row.key} style={{width: this.state.width / rows.length}} className={`grid-row row-${row.key}`}>
+        <div key={row.key} style={{width: width}} className={`grid-row row-${row.key}`}>
           {row.imgs}
         </div>
       );

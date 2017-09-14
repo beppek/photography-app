@@ -1,9 +1,9 @@
 .collection-grid {
-  float: left;
-  display: block;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .grid-row {
   float: left;
-  display: block;
 }
