@@ -1,0 +1,33 @@
+.fullscreen-image-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(5,5,5);
+  cursor: zoom-out;
+}
+
+.fullscreen-image-topbar {
+  position: absolute;
+  top: 0;
+  background-color: rgb(25,25,25);
+  width: calc(100% - 30px);
+  /* text-align: right; */
+  z-index: 1;
+  margin-right: 40px;
+}
+
+.close-button {
+  float: right;
+}
+
+.fullscreen-image-container img {
+  height: calc(100vh - 50px);
+  /* cursor: default; */
+}
+
+.image-title {
+  color: #fff;
+  display: inline-block;
+  margin: 10px 0 0;
+}
