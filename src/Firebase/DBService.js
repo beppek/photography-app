@@ -23,7 +23,7 @@ class DBService {
     }
 
     getFromDB(doc, callback) {
-        const dbRef = this.database.ref(doc).orderByKey();
+        const dbRef = this.database.ref(doc);
         dbRef.on("value", snapshot => {
             let data = [];
             snapshot.forEach((childSnap) => {
