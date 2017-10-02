@@ -18,6 +18,24 @@
   box-shadow: 0 1px 4px 0px rgba(95,95,95,0.2);
 }
 
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
 /* .page-menu {
   color: rgb(100, 100, 100)
 } */
