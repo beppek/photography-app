@@ -13,7 +13,7 @@ class FullscreenImage extends Component {
       showOverlay: false
     }
   }
-  
+
 
   closeFullscreen = () => {
     this.props.closeFullscreen();
@@ -27,7 +27,6 @@ class FullscreenImage extends Component {
     e.stopPropagation();
     let {value} = this.props.img;
     this.setState({showOverlay: !this.state.showOverlay});
-    console.log(value.description);
   }
 
   render() {
@@ -39,15 +38,15 @@ class FullscreenImage extends Component {
     let overlayStatus = this.state.showOverlay ? "display" : "hidden";
     return (
       <div onClick={this.clickOutside} className="fullscreen-image">
-          <div className="fullscreen-image-topbar">
-            <h2 className="image-title">{img.value.title}</h2>
-            <IconButton 
-              onClick={this.closeFullscreen}
-              iconStyle={iconStyle} 
-              className="close-button" 
-              iconClassName="fa fa-times"
-            />
-          </div>
+        <div className="fullscreen-image-topbar">
+          <h2 className="image-title">{img.value.title}</h2>
+          <IconButton 
+            onClick={this.closeFullscreen}
+            iconStyle={iconStyle} 
+            className="close-button" 
+            iconClassName="fa fa-times"
+          />
+        </div>
         <div className="fullscreen-image-background">
           <div className="fullscreen-image-container">
             <img 
