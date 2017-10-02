@@ -4,7 +4,7 @@ import * as imageActions from '../../actions/imageActions';
 
 import "./Image.css";
 
-const width = window.innerWidth > 400 ? 410: 290;
+const width = window.innerWidth > 400 ? 370: 290;
 
 class Image extends Component {
 
