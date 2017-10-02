@@ -20,9 +20,9 @@ class Collections extends Component {
     });
     return (
       <div className="Collections">
-        {!fullscreenImage
-          ? <MasonryGrid imgs={imgs}/>
-          : <FullscreenImage img={fullscreenImage}/>
+        <MasonryGrid imgs={imgs}/>
+        {fullscreenImage &&
+          <FullscreenImage img={fullscreenImage}/>
 }
       </div>
     );
