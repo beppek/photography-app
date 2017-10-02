@@ -4,6 +4,7 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
 import DBService from "../../Firebase/DBService";
+import "./HomeHeader.css";
 
 class HomeHeader extends Component {
 
@@ -26,13 +27,13 @@ class HomeHeader extends Component {
     return (
       <div>
         <div>
-          <h2>Beppe Karlsson</h2>
+          <h2 className="title">Beppe Karlsson</h2>
         </div>
-        <div className={"collections-list"}>
+        {/* <div className={"collections-list"}>
           <SelectField value={this.state.value} onChange={this.handleChange}>
             {menuItems}
           </SelectField>
-        </div>
+        </div> */}
       </div>
     );
   }
