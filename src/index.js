@@ -28,7 +28,7 @@ store.dispatch((dispatch) => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+    <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
       <App />
     </MuiThemeProvider>
   </Provider>,

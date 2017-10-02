@@ -46,7 +46,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
+            {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <HeaderMenu {...this.props} />
           </div>
           <Route path="/collections" component={() => <Collections />} />
