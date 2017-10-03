@@ -1,3 +1,10 @@
+This is a serverless photography portfolio app, currently under development.
+
+The goal of the finished application is to allow users to view and sort images by collections determined by the photographer, as well as search by keywords and view a portfolio page that holds the photographer's best work.
+
+The user should also be able to purchase images and receive the printed image, delivered to their address.
+
+## Create React App Info Below
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
