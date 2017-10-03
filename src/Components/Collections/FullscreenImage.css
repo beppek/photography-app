@@ -4,7 +4,24 @@
   justify-content: center;
   width: 100%;
   background-color: rgb(240,240,240);
+}
+
+.fullscreen-image-open {
+  visibility: visible;
+  opacity: 1;
   cursor: zoom-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.fullscreen-image-closed {
+  visibility: hidden;
+  opacity: 0;
+  cursor: default;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .fullscreen-image-topbar {
@@ -23,6 +40,22 @@
   font-family: 'Megrim', cursive;
 }
 
+.fullscreen-image-topbar-open {
+  position: fixed;
+  top: 0;
+  -webkit-transition: top .3s ease-in-out;
+  -moz-transition: top .3s ease-in-out;
+  transition: top .3s ease-in-out;
+}
+
+.fullscreen-image-topbar-closed {
+  position: fixed;
+  top: -55px;
+  -webkit-transition: top .3s ease-in-out;
+  -moz-transition: top .3s ease-in-out;
+  transition: top .3s ease-in-out;
+}
+
 .close-button {
   float: right;
 }
@@ -38,10 +71,26 @@
   position: fixed;
   display: flex;
   justify-content: center;
+}
+
+.fullscreen-image-background-open {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.fullscreen-image-background-closed {
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .info-button {
@@ -56,7 +105,8 @@
 }
 
 .info-button span {
-  color: #3680D4!important;
+  /* color: #3680D4!important; */
+  color: #2355bf!important;
 }
 
 .fullscreen-image-overlay {
@@ -112,11 +162,17 @@
   border-radius: 2px;
   margin: 30px auto 0;
   display: block;
-  min-width: 200px;
-  min-height: 200px;
   padding: 10px;
   box-shadow: 0 0 10px 1px rgba(95,95,95,0.3);
   max-height: calc(100vh - 150px);
+}
+
+.fullscreen-image .loader {
+  width: 100px;
+  margin-top: 25vh;
+  background: none;
+  padding: 0;
+  box-shadow: none;
 }
 
 .image-title {
