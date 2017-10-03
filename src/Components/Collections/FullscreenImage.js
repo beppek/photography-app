@@ -17,12 +17,7 @@ class FullscreenImage extends Component {
   }
 
   closeFullscreen = () => {
-    this.setState({loaded: false});
-    this.props.closeFullscreen();
-  }
-  
-  clickOutside = (e) => {
-    this.setState({loaded: false});
+    this.setState({loaded: false, showOverlay: false});
     this.props.closeFullscreen();
   }
 
@@ -60,7 +55,7 @@ class FullscreenImage extends Component {
     };
 
     return (
-      <div onClick={this.clickOutside} className={`fullscreen-image fullscreen-image-${openStatus}`}>
+      <div onClick={this.closeFullscreen} className={`fullscreen-image fullscreen-image-${openStatus}`}>
         <div className={`fullscreen-image-topbar fullscreen-image-topbar-${openStatus}`}>
           <h2 className="image-title">{img.value.title}</h2>
           <IconButton 
