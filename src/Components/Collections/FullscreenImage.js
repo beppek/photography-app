@@ -72,7 +72,7 @@ class FullscreenImage extends Component {
               onLoad={() => this.setState({loaded:true})}
               src={img.value.path.downloadURL}
             />
-            {!loaded && 
+            {!loaded && open &&
             <img className="loader" src={loader} />}
             {loaded &&
             <IconButton 
